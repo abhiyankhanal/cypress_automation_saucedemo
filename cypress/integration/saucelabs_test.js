@@ -9,7 +9,7 @@ describe('Sauce Labs Test: Login', function () {
         })
     })
 
-    it('Verify locked_out_user cannot login', function () {
+    it('Verify abcs locked_out_user cannot login', function () {
         cy.login(this.user.invalidusername, this.user.password)
         cy.get('[data-test="error"]').should('have.text', this.user.errorText) // Verify error message is displayed
     })
